@@ -1,7 +1,7 @@
 <template>
-    <span class="flex justify-between" v-for="product in products" :key="product.id">
-    <div class="flex mt-6 ml-2">
-            <div  :class="product.colorbanner " @click="router.push('/product/' + product.id)">{{ product.name }}
+    <span class="flex justify-between" @click="router.push('/product/' + product.id)" v-for="product in products" :key="product.id">
+    <div class="flex mt-6 ml-2"  >
+            <div  :class="product.colorbanner " >{{ product.name }}
       </div>
       </div>
         <div class="mt-6">

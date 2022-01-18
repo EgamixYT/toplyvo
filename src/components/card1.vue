@@ -80,16 +80,21 @@
     </div>
     <div class="bg-gray-100 h-full mt-6">
         <div class="flex justify-between">
-        <div class="flex  justify-start">
-            <p class="text-gray-800 mt-4 ml-2 font-bold text-2xl">5 л</p>
-        </div>
-        <div class="flex flex-col mr-4 mt-6">
-            <p class="text-4xl font-bold">151.10грн</p>
-            <p class="text-green-400">Экономия 8.75</p>
-        </div>
+            <div class="flex  justify-start">
+                <p class="text-gray-800 mt-4 ml-2 font-bold text-2xl">
+                    {{ volume = (counter5l * 5) + (counter10l * 10) + (counter20l * 20) + (counter40l * 40) + ' ' +'л' }}
+                </p>
+            </div>
+            <div class="flex flex-col mr-4 mt-6">
+                <p class="text-4xl font-bold">
+                    {{ sum = (counter5l * 142.5) + (counter10l * 285) + (counter20l * 570) + (counter40l * 1140) + ' ' +'грн.' }}
+                </p>
+                <p class="text-green-400">{{  econ = ((counter5l * 5) + (counter10l * 10) + (counter20l * 20) + (counter40l * 40))*1.25 + ' ' + 'грн' }}</p>
+            </div>
         </div>
         <div class="flex justify-center mt-8 pb-20">
-            <router-link to="/pay" class="nav px-20 py-4 text-white text-xl font-senibold rounded-md">Продолжить</router-link>
+            <router-link to="/pay" class="nav px-20 py-4 text-white text-xl font-senibold rounded-md">Продолжить
+            </router-link>
         </div>
     </div>
 </template>
@@ -98,10 +103,17 @@
     import {
         ref
     } from 'vue'
+
+    const economy = ref(1.5)
+    const econ = ref(0)
+    const volume = ref(0)
+    const sum = ref(0)
     const counter5l = ref(0)
-     const counter10l = ref(0)
-      const counter20l = ref(0)
-       const counter40l = ref(0)
+    const counter10l = ref(0)
+    const counter20l = ref(0)
+    const counter40l = ref(0)
+   
+   
     const product = {
         id: 1,
         name: 'ДТ евро',
