@@ -43,11 +43,11 @@
                 <p class="text-gray-600">Талон</p>
                 <p class="text-gray-800 font-bold text-xl">10 л</p>
             </div>
-            <button @click="counter5l = counter5l - 1">
-                <MinusIcon class="h-6 w-6 text-gray-800" v-if="counter5l > 0" />
+            <button @click="counter10l = counter10l - 1">
+                <MinusIcon class="h-6 w-6 text-gray-800" v-if="counter10l > 0" />
             </button>
-            {{counter5l}}
-            <button @click="counter5l = counter5l + 1">
+            {{counter10l}}
+            <button @click="counter10l = counter10l + 1">
                 <PlusIcon class="h-6 w-6 text-gray-800" />
             </button>
         </div>
@@ -56,11 +56,11 @@
                 <p class="text-gray-600">Талон</p>
                 <p class="text-gray-800 font-bold text-xl">20 л</p>
             </div>
-            <button @click="counter5l = counter5l - 1">
-                <MinusIcon class="h-6 w-6 text-gray-800" v-if="counter5l > 0" />
+            <button @click="counter20l = counter20l - 1">
+                <MinusIcon class="h-6 w-6 text-gray-800" v-if="counter20l > 0" />
             </button>
-            {{counter5l}}
-            <button @click="counter5l = counter5l + 1">
+            {{counter20l}}
+            <button @click="counter20l = counter20l + 1">
                 <PlusIcon class="h-6 w-6 text-gray-800" />
             </button>
         </div>
@@ -69,11 +69,11 @@
                 <p class="text-gray-600">Талон</p>
                 <p class="text-gray-800 font-bold text-xl">40 л</p>
             </div>
-            <button @click="counter5l = counter5l - 1">
-                <MinusIcon class="h-6 w-6 text-gray-800" v-if="counter5l > 0" />
+            <button @click="counter40l = counter40l - 1">
+                <MinusIcon class="h-6 w-6 text-gray-800" v-if="counter40l > 0" />
             </button>
-            {{counter5l}}
-            <button @click="counter5l = counter5l + 1">
+            {{counter40l}}
+            <button @click="counter40l = counter40l + 1">
                 <PlusIcon class="h-6 w-6 text-gray-800" />
             </button>
         </div>
@@ -99,6 +99,9 @@
         ref
     } from 'vue'
     const counter5l = ref(0)
+     const counter10l = ref(0)
+      const counter20l = ref(0)
+       const counter40l = ref(0)
     const product = {
         id: 1,
         name: 'ДТ евро',
