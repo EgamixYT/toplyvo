@@ -9,7 +9,7 @@
     <div class="mt-1">
       <input type="tel" name="tel" id="tel" class="shadow-md rounded-sm border-b mt-2 h-8 focus:ring-gray-500 focus:border-gray-500 block w-full sm:text-md font-semibold text-gray-700 border-gray-300 rounded-" placeholder="+38000000000" />
     </div>
-    <div class="mt-4">
+    <div class="mt-4 p-2">
       <p class="text-sm text-gray-400">Который хотите использовать</p>
       <p class="text-sm text-gray-400"> или использовали для работы</p>
       </div>

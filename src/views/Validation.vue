@@ -9,7 +9,7 @@
     <div class="mt-1">
       <input type="tel" name="tel" id="tel" class="shadow-md rounded-sm border-b mt-2 h-8 focus:ring-gray-500 focus:border-gray-500 block w-full sm:text-md font-semibold text-gray-700 border-gray-300 rounded-" placeholder="" />
     </div>
-    <div class="mt-4">
+    <div class="mt-4 px-2">
       <p class="text-sm text-gray-400">SMS прийдет на указанный номер</p>
       <p class="text-sm text-gray-400 mt-2"> Отправить код повторно</p>
        <p class="text-sm text-gray-400"> Через 59сек</p>
