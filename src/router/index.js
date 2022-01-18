@@ -2,14 +2,24 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 //components
 import Home from '../views/Home.vue'
-import Navbar from '../components/Navbar.vue'
-import Footer from '../components/Footer.vue'
+import Ver from '../views/Verification.vue'
+import Val from '../views/Validation.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/verification',
+    name: 'verification',
+    component: Ver
+  },
+  {
+    path: '/validation',
+    name: 'validation',
+    component: Val
   },
 ]
 
