@@ -17,7 +17,7 @@
   </div>
   </div>
    <div class="flex justify-center text-gray-100 mt-12">
-      <router-link to="/validation" class="button-buy py-4 px-24 "> Продолжить </router-link>
+      <router-link to="/buy" class="button-buy py-4 px-24 "> Продолжить </router-link>
   </div>
   <div class="flex justify-center text-gray-400 mt-2 ">
       <router-link to="/" class=" py-4 px-24 font-semibold"> Назад </router-link>
