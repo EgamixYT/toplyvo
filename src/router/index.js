@@ -6,6 +6,7 @@ import Ver from '../views/Verification.vue'
 import Val from '../views/Validation.vue'
 import Buy from '../views/Buy.vue'
 import Pay from '../views/Pay.vue'
+import Tickets from '../views/Tickets.vue'
 
 //components
 import Card1 from '../components/card1.vue'
@@ -41,6 +42,11 @@ const routes = [
     path: '/pay',
     name: 'pay',
     component: Pay,
+  },
+  {
+    path: '/tickets',
+    name: 'tickets',
+    component: Tickets,
   },
 ]
 

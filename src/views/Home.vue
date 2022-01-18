@@ -22,8 +22,8 @@
                     <DisclosureButton
                         class="inline-flex items-center justify-center p-2 rounded-full text-gray-400 hover:text-gray-500 bg-white shadow-lg ">
                         <span class="sr-only">Open main menu</span>
-                        <MenuIcon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
-                        <XIcon v-else class="block h-6 w-6" aria-hidden="true" />
+                        <MenuIcon v-if="!open" @click="isOpen =  true" class="block h-6 w-6" aria-hidden="true" />
+                        <XIcon v-else class="block h-6 w-6" @click="isOpen = false" aria-hidden="true" />
                     </DisclosureButton>
                 </div>
             </div>
@@ -35,15 +35,19 @@
                 <p>+38 (096) 901 69 58</p>
             </div>
             <div>
-                <p class="ml-4 mt-4 text-gray-800 font-semibold">Войти в аккаунт</p>
-                <p class="viber">Мы в вайбере</p>
+                <p class="ml-4 mt-4 text-gray-800 font-semibold hover:text-gray-400" v-if="!isLogin" @click="isLogin = true">Войти в аккаунт</p>
+                <p class="ml-4 mt-4 text-gray-800 font-semibold" v-if="isLogin" @click="isLogin = false">Выйти</p>
+                <div class="flex flex-col">
+                <router-link to="/tickets" class="ml-4 mt-4 text-gray-800 font-semibold" v-if="isLogin">Мои талоны</router-link>
+                <a href="https://invite.viber.com/?g2=AQBKlr1IsR1JE0zCp1OmoVIen7V0XKG0g6G9zG2W%2BUu1C2sgOgaxMtMWz0bPOtG%2F" target="_blank" class="viber">Мы в вайбере</a>
+                </div>
             </div>
             <div class="pt-2 pb-4 ">
                 <img src="../assets/images/bg.png" alt="">
             </div>
         </DisclosurePanel>
     </Disclosure>
-    <div class="py-4">
+    <div v-show="!isOpen" class="py-4">
         <div>
             <img src="../assets/images/bg.png" alt="">
         </div>
@@ -83,6 +87,11 @@
         MenuIcon,
         XIcon
     } from '@heroicons/vue/outline'
+import {ref} from 'vue'
+
+const isLogin = ref(false)
+const isOpen = ref(false)
+
 </script>
 
 <style scoped>
